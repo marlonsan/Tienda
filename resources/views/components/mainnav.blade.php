@@ -40,10 +40,10 @@
                 </div>
             @else
                 <li class="perfil"><a href=""><img
-                                src="">{{ Auth::user()->name }}
+                                src="{{ asset('img/icon/perfil.png') }}">{{ Auth::user()->name }}
                     </a>
                     <ul class="perfil-item">
-                        <li><a href=""><img src=""> Ver
+                        <li><a href="{{route('perfil')}}"><img src="{{ asset('img/icon/perfil.png') }}"> Ver
                                 Perfil</a></li>
                         <li><a href="{{ route('logout') }} "
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>X</b>

@@ -3,7 +3,7 @@
         <div class="categorias-pie">
             <div class="titulo-footer">Navegación</div>
                 @if(Auth::guest())
-                    <li><a href="">&check; | Ingresar</a></li>
+                    <li><a href="{{route('perfil')}}">&check; | Ingresar</a></li>
                 @else
                     <li><a href="{{ route('index') }}">&check; | Inicio</a></li>
                     <li><a href="">&check; | Perfil</a></li>
