@@ -18,3 +18,9 @@ Route::get('/', 'HomeController@index')->name('index');
 Route::get('/condiciones', 'HomeController@condiciones')->name('condiciones');
 
 Route::get('/nosotros', 'HomeController@nosotros')->name('nosotros');
+
+Route::prefix('perfil')->group(function()
+{
+    Route::get('', 'HomeController@perfil')->name('perfil');
+
+});
