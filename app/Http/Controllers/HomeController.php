@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('nosotros');
     }
+
+    public function perfil()
+    {
+        return view('perfil');
+    }
 }
