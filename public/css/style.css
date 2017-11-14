@@ -1527,7 +1527,7 @@ publicidad-left ul li a{
     -webkit-box-shadow: 7px 18px 18px -14px rgba(0,0,0,0.56);
     -moz-box-shadow: 7px 18px 18px -14px rgba(0,0,0,0.56);
     box-shadow: 7px 18px 18px -14px rgba(0,0,0,0.56);
-    margin-left: 10px;
+    margin-left: 40px;
 }
 .grupo_opciones_perfil a p{
     width:100%;
