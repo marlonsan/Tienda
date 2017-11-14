@@ -141,7 +141,7 @@ body{
     /*background: #660066;*/
 }
 .cabeza .menu nav{
-    width: 70%;
+    width: 67%;
     margin: 0 auto;
     z-index: 3;
 }
@@ -151,9 +151,16 @@ body{
     float: left;
 }
 .cabeza .menu nav ul li{
-    width: 16%;
+    width: 17%;
     display: block;
     float: left;
+    color: dodgerblue;
+    /*background:#ffcc33;
+    background:#F2F2F2;*/
+}
+
+.cabeza .menu nav ul li a:hover{
+    color: dodgerblue;
     /*background:#ffcc33;
     background:#F2F2F2;*/
 }
