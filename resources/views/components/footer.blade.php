@@ -21,11 +21,10 @@
 	        <li><a href="{{route('condiciones')}}">&check; | Condiciones</a></li>
             <li><a href="{{route('nosotros')}}">&check; | Acerca  de Nosotros</a></li>
         </div>
-
         <div class="categorias-pie">
             <div class="titulo-footer">Una Aplicación de</div>
-            <img src="">
-            <li><a href="http://inf.unitru.edu.pe/" id="web">Escuela de Infórmatica</a></li>
+            <img src="{{ asset('img/empet.png') }}">
+            <li><a href="http://inf.unitru.edu.pe/" id="web">Empresa SAC</a></li>
         </div>
     </footer>
 </div>

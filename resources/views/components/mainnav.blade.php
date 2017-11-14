@@ -11,8 +11,8 @@
 <div class="menu">
     <nav>
         <ul>
-            <li><a href="{{ route('index') }}" id="activo"><img src=""> INICIO</a></li>
-            <li><a href="{{ route('index') }}"><img src="">CATEGORÍAS</a>
+            <li><a href="{{ route('index') }}" id="activo"><img src="{{ asset('img/icon/home.png') }}">INICIO</a></li>
+            <li><a href="{{ route('index') }}"><img src="{{asset('img/icon/categoria.png') }}">CATEGORÍAS</a>
                 <ul>
 
                 </ul>
@@ -29,23 +29,21 @@
             </li>
             <li>
                 <a href="">
-                    <img src="">CARRITO
+                    <img src="{{ asset('img/icon/check.png') }}">CARRITO
                 </a>
             </li>
-            <li>
-                <input type="text" placeholder="Buscar">
-            </li>
+
 
             @if(Auth::guest())
-                <div class="perfil" id="Btnemer-sesion">
-                    <a href="#"><span>&#9786;</span> | INGRESAR</a>
+                <div class="perfil" id="emergente-login">
+                    <a href="#"><span>&#9786;</span>INGRESAR</a>
                 </div>
             @else
                 <li class="perfil"><a href=""><img
-                                src="{{ asset('img/icon/perfil.png') }}">{{ Auth::user()->entidad->persona->Nombres }}
+                                src="">{{ Auth::user()->name }}
                     </a>
                     <ul class="perfil-item">
-                        <li><a href=""><img src="{{ asset('img/icon/perfil.png') }}"> Ver
+                        <li><a href=""><img src=""> Ver
                                 Perfil</a></li>
                         <li><a href="{{ route('logout') }} "
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>X</b>
