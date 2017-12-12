@@ -1,6 +1,5 @@
-CREATE  DATABASE tiendacom_sistema;
-use tiendacom_sistema;
 
+/*
 create TABLE usuario(
   UsuarioID INT AUTO_INCREMENT PRIMARY KEY,
   Contraseña VARCHAR(15),
@@ -9,7 +8,7 @@ create TABLE usuario(
   PersonaID INT,
   FOREIGN KEY (RolID) REFERENCES rol (RolID),
   FOREIGN KEY (PersonaID) REFERENCES persona (PersonaID)
-);
+);*/
 
 CREATE TABLE rol(
   RolID INT AUTO_INCREMENT PRIMARY KEY,
@@ -172,3 +171,7 @@ create table linea_venta(
   foreign key (VentaID) references venta (VentaID)
 );
 
+ALTER TABLE users ADD RolID int ; 
+ALTER TABLE users ADD PersonaID int ; 
+ALTER TABLE users ADD FOREIGN KEY (RolID) REFERENCES rol (RolID);
+ALTER TABLE users ADD FOREIGN KEY (PersonaID) REFERENCES persona (PersonaID);
