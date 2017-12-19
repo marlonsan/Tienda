@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('index');
+Route::get('/{categoria?}', 'HomeController@index')->name('index');
 
 Route::get('/condiciones', 'HomeController@condiciones')->name('condiciones');
 

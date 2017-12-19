@@ -1,4 +1,8 @@
-<div class="nav-categoria">Categoría / <b>Todos</b> </div>
+@if($categoria == null)
+    <div class="nav-categoria">Categoría / <b>Todos</b> </div>
+@else
+    <div class="nav-categoria">Categoría / <b>{{$categoria}}</b> </div>
+@endif
 <div class="nav-slider">
     <div class="flexslider" id="flexslider-main">
         <ul class="slides" id="slider">

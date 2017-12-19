@@ -12,9 +12,16 @@
     <nav>
         <ul>
             <li><a href="{{ route('index') }}" id="activo"><img src="{{ asset('img/icon/home.png') }}">INICIO</a></li>
-            <li><a href="{{ route('index') }}"><img src="{{asset('img/icon/categoria.png') }}">CATEGORÍAS</a>
+            <li><a href="{{ route('index', ['categoria' => null]) }}"><img src="{{ asset('img/icon/categoria.png') }}">CATEGORÍAS</a>
                 <ul>
-
+                    @foreach($categorias as $categoria)
+                        <li>
+                            <a href="{{ route('index', ['categoria' => strtolower($categoria->Nombre)]) }}">
+                                <img src="{{ asset($categoria->Imagen) }}"
+                                             alt=""> {{ $categoria->Nombre }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </li>
             <li>

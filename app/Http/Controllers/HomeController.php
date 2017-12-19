@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Categoria;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -21,9 +23,43 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   public function index(Request $request, $categoria = null)
     {
-        return view('index');
+         $categoria_nombre = $categoria;
+        if($categoria != null)
+        {
+            $cat = Categoria::where('Nombre', $categoria)->select('CategoriaID')->first();
+            if($cat != null)
+            {
+                $categoria = $cat->CategoriaID;
+            }
+            else
+            {
+                $categoria = null;
+            }
+        }
+        
+        $input = $request->only(['beneficio']);
+
+        if(Auth::check())
+        {
+            return view('principal')
+                ->with('categoria',title_case($categoria_nombre))
+                ->with('categorias', Categoria::all());
+
+        }
+        else
+        {
+            return view('index')
+                ->with('categoria',title_case($categoria_nombre))
+                ->with('categorias', Categoria::all());
+        }
+
+       /*
+            return view('index')
+                ->with('categorias', Categoria::all());*/
+        
+        
     }
 
     public function condiciones()
