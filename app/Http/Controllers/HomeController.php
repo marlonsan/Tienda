@@ -44,15 +44,13 @@ class HomeController extends Controller
         if(Auth::check())
         {
             return view('principal')
-                ->with('categoria',title_case($categoria_nombre))
-                ->with('categorias', Categoria::all());
+                ->with('categoria',title_case($categoria_nombre));
 
         }
         else
         {
             return view('index')
-                ->with('categoria',title_case($categoria_nombre))
-                ->with('categorias', Categoria::all());
+                ->with('categoria',title_case($categoria_nombre));
         }
 
        /*

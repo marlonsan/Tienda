@@ -13,11 +13,13 @@
 
 Auth::routes();
 
-Route::get('/{categoria?}', 'HomeController@index')->name('index');
+
 
 Route::get('/condiciones', 'HomeController@condiciones')->name('condiciones');
 
 Route::get('/nosotros', 'HomeController@nosotros')->name('nosotros');
+
+Route::get('/{categoria?}', 'HomeController@index')->name('index');
 
 Route::prefix('perfil')->group(function()
 {
