@@ -44,7 +44,6 @@
 @section('scripts')
     @parent
 
-    <!-- VENTANA DE INICIO DE SESION------->
 
     <script>
         //var URLactual = window.location;
@@ -81,7 +80,7 @@
 	            urlLocation.value = "{{ Route::currentRouteName() }}";
             }
         }
-
+        
         form.submit(function(e) {
             e.preventDefault();
             $('#DocumentoIdentidadGroup').removeClass('has-error');

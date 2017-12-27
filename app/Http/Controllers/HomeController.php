@@ -52,12 +52,6 @@ class HomeController extends Controller
             return view('index')
                 ->with('categoria',title_case($categoria_nombre));
         }
-
-       /*
-            return view('index')
-                ->with('categorias', Categoria::all());*/
-        
-        
     }
 
     public function condiciones()
@@ -70,8 +64,15 @@ class HomeController extends Controller
         return view('nosotros');
     }
 
+    public function carrito()
+    {
+        return view('carrito');
+    }
+
     public function perfil()
     {
         return view('perfil');
     }
+
+     
 }

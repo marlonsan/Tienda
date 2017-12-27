@@ -12,7 +12,7 @@
     <nav>
         <ul>
             <li><a href="{{ route('index') }}" id="activo"><img src="{{ asset('img/icon/home.png') }}">INICIO</a></li>
-            <li><a href="{{ route('index', ['categoria' => null]) }}"><img src="{{ asset('img/icon/categoria.png') }}">CATEGORÍAS</a>
+            <li><a href="{{ route('index', ['categoria' => null]) }}"><img src="{{ asset('img/icon/categoria.png') }}">CATEGORÍAS v </a>
                 <ul>
                     @foreach($categorias as $categoria)
                         <li>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{'carrito'}}">
                     <img src="{{ asset('img/icon/check.png') }}">CARRITO
                 </a>
             </li>
@@ -52,6 +52,9 @@
                     <ul class="perfil-item">
                         <li><a href="{{route('perfil')}}"><img src="{{ asset('img/icon/perfil.png') }}"> Ver
                                 Perfil</a></li>
+                        @if(Auth::user()->rol->RolID === 1 )
+                        <li><a href=""><img src="{{ asset('img/icon/perfil.png') }}"> Intranet</a></li>
+                        @endif
                         <li><a href="{{ route('logout') }} "
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>X</b>
                                 Cerrar Sesión</a>

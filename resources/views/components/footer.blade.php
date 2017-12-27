@@ -6,10 +6,13 @@
                     <li><a href="{{route('perfil')}}">&check; | Ingresar</a></li>
                 @else
                     <li><a href="{{ route('index') }}">&check; | Inicio</a></li>
-                    <li><a href="">&check; | Perfil</a></li>
+                    <li><a href="{{route('perfil')}}">&check; | Perfil</a></li>
+                    @if(Auth::user()->rol->RolID === 1 )
+                        <li><a href="">&check; | Intranet</a></li>
+                    @endif
                     <li><a href="{{ route('logout') }} "
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>X</b>
-                            Salir</a>
+                            Cerrar Sesión</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
