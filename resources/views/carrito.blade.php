@@ -4,6 +4,6 @@
    <h1>carrito</h1>
 </div>
 @if(Auth::guest())
-
+    @include('components.login')
 @endif
 @stop

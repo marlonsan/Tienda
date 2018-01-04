@@ -53,7 +53,7 @@
                         <li><a href="{{route('perfil')}}"><img src="{{ asset('img/icon/perfil.png') }}"> Ver
                                 Perfil</a></li>
                         @if(Auth::user()->rol->RolID === 1 )
-                        <li><a href=""><img src="{{ asset('img/icon/perfil.png') }}"> Intranet</a></li>
+                        <li><a href="{{route('intranet')}}"><img src="{{ asset('img/icon/perfil.png') }}"> Intranet</a></li>
                         @endif
                         <li><a href="{{ route('logout') }} "
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>X</b>

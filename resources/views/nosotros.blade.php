@@ -56,6 +56,6 @@
     </div>
 </div>
 @if(Auth::guest())
-
+    @include('components.login')
 @endif
 @stop

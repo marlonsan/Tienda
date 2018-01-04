@@ -1489,8 +1489,65 @@ publicidad-left ul li a{
 .nav-pagina .flexslider:hover .flex-direction-nav .flex-next:hover {
     opacity: 1;
 }
-
-
+/***** opciones intranet  */
+.grupo_opciones_intranet{
+    width: 400px;
+    margin:10px auto;
+}
+.grupo_opciones_intranet .titulo_item_intranet{
+    width:100%;
+    display: block;
+    float: left;
+    color:gray;
+    font-size: 14px;
+    text-align: center;
+    padding:17px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px dashed #BDBDBD;
+    margin-bottom: 15px;
+}
+.grupo_opciones_intranet a{
+    width:20%;
+    background:white;
+    display: block;
+    float: left;
+    padding: 10px;
+    margin:10px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -webkit-box-shadow: 7px 18px 18px -14px rgba(0,0,0,0.56);
+    -moz-box-shadow: 7px 18px 18px -14px rgba(0,0,0,0.56);
+    box-shadow: 7px 18px 18px -14px rgba(0,0,0,0.56);
+    margin-left: 40px;
+}
+.grupo_opciones_intranet a p{
+    width:100%;
+    display: block;
+    float: left;
+    color:gray;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 2px;
+}
+.grupo_opciones_intranet a img{
+    width:100%;
+    display: block;
+    float: left;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.grupo_opciones_intranet a:hover{
+    transform: scale(1.1, 1.1);
+    transition: 1s;
+}
 
 /*--------------------------------*/
 /*---------DATOS PERSONALES-------*/
