@@ -36,4 +36,13 @@ class IntranetController extends Controller
    public function show_agregar_administrador(){
    		return view('components.intranet.agregar_administrador');
    }
+
+   public function show_modificar_stock(){
+      return view('components.intranet.modificar_stock',
+                  [
+                     'categorias' => Categoria::all(),
+                     'marcas'     => Marca::all(),
+                  ]
+      );
+   }
 }

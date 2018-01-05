@@ -68,4 +68,16 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        return view('afiliar_persona',
+                    [
+                        'generos'        => \App\Genero::All(),
+                        'operadoras'     => \App\Operadora::All(),
+                        'estadosCiviles' => \App\EstadoCivil::All(),
+                        'departamentos'  => \App\Departamento::All(),
+                    ]);
+    }
+    
 }

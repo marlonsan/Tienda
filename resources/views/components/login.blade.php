@@ -30,10 +30,7 @@
             </div>
             <div class="pie-emr">
                 <form action="#" method="post">
-                    <a href="#" style="color: blueviolet" onMouseover="this.style.color='blue'" onMouseout="this.style.color='blueviolet'">¿olvidaste tu contraseña?</a>
                     <a href="{{ route('register') }}" style="color: blueviolet" onMouseover="this.style.color='blue'" onMouseout="this.style.color='blueviolet'">Registrarme</a>
-                    <input type="hidden" id="cod-prom-afi01">
-                    <!--input type="submit" id="afiliar-emer" value="Quiero afiliarme"-->
                 </form>
 
             </div>

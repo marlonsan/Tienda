@@ -66,7 +66,7 @@
                             <input type="file" id="dni" placeholder="Ingrese Precio"
                                    >
                         
-                            <div id="btn-pass">Guardar</div>
+                            <div id="btn-pass" style="width: 150px">Guardar</div>
                         </div>
                     </form>
                 </div>

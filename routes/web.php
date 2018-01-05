@@ -29,13 +29,15 @@ Route::prefix('intranet')->group(function()
     Route::get('agregar_modelo', 'IntranetController@show_agregar_modelo')->name('intranet.agregar_modelo');
     Route::get('agregar_articulo', 'IntranetController@show_agregar_articulo')->name('intranet.agregar_articulo');
     Route::get('agregar_administrador', 'IntranetController@show_agregar_administrador')->name('intranet.agregar_administrador');
-
+    Route::get('modificar_stock', 'IntranetController@show_modificar_stock')->name('intranet.modificar_stock');
 });
 
 Route::prefix('perfil')->group(function()
 {
     Route::get('', 'HomeController@perfil')->name('perfil');
-
+    Route::get('datospersonales', 'PerfilController@show_datos_personales')->name('perfil.show_datos_personales');
+    Route::get('clave', 'PerfilController@show_clave')->name('perfil.show_clave');
+    Route::post('clave', 'PerfilController@editar_clave')->name('perfil.editar_clave');
 });
 
 

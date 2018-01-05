@@ -52,7 +52,7 @@
                             <div class="rpta-seccion" id="rpta-nombres"></div>
 
 
-                            <div id="btn-pass">Guardar</div>
+                            <div id="btn-pass" style="width: 150px">Guardar</div>
                         </div>
                     </form>
                 </div>
